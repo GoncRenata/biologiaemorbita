@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Serif+Pro:wght@400;600&display=swap');
+
+:root {
+  --background: hsl(0, 0%, 98%);
+  --foreground: hsl(210, 12%, 14%);
+  --muted: hsl(210, 40%, 95%);
+  --muted-foreground: hsl(215, 16%, 47%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(210, 12%, 14%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(210, 12%, 14%);
+  --border: hsl(214, 32%, 91%);
+  --input: hsl(214, 32%, 91%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(210, 40%, 96%);
+  --secondary-foreground: hsl(222, 84%, 5%);
+  --accent: hsl(210, 40%, 96%);
+  --accent-foreground: hsl(222, 84%, 5%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(207, 90%, 54%);
+  --radius: 0.5rem;
+  
+  /* Custom colors for the blog */
+  --blog-primary: hsl(207, 90%, 54%);
+  --blog-secondary: hsl(210, 25%, 29%);
+  --blog-accent: hsl(24, 100%, 50%);
+  --blog-neutral-50: hsl(0, 0%, 98%);
+  --blog-neutral-900: hsl(210, 12%, 14%);
+}
+
+.dark {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(210, 40%, 98%);
+  --muted: hsl(217, 32%, 17%);
+  --muted-foreground: hsl(215, 20%, 65%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(210, 40%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(210, 40%, 98%);
+  --border: hsl(217, 32%, 17%);
+  --input: hsl(217, 32%, 17%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(210, 40%, 98%);
+  --secondary: hsl(217, 32%, 17%);
+  --secondary-foreground: hsl(210, 40%, 98%);
+  --accent: hsl(217, 32%, 17%);
+  --accent-foreground: hsl(210, 40%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(210, 40%, 98%);
+  --ring: hsl(207, 90%, 54%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Serif Pro', serif;
+  }
+
+  .font-heading {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-body {
+    font-family: 'Source Serif Pro', serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .blog-primary {
+    color: var(--blog-primary);
+  }
+
+  .blog-secondary {
+    color: var(--blog-secondary);
+  }
+
+  .blog-accent {
+    color: var(--blog-accent);
+  }
+
+  .bg-blog-primary {
+    background-color: var(--blog-primary);
+  }
+
+  .bg-blog-secondary {
+    background-color: var(--blog-secondary);
+  }
+
+  .bg-blog-accent {
+    background-color: var(--blog-accent);
+  }
+
+  .bg-blog-neutral-50 {
+    background-color: var(--blog-neutral-50);
+  }
+
+  .text-blog-neutral-900 {
+    color: var(--blog-neutral-900);
+  }
+
+  .hover\:bg-blog-primary:hover {
+    background-color: var(--blog-primary);
+  }
+
+  .hover\:text-blog-primary:hover {
+    color: var(--blog-primary);
+  }
+
+  .border-blog-primary {
+    border-color: var(--blog-primary);
+  }
+
+  .focus\:ring-blog-primary:focus {
+    --tw-ring-color: var(--blog-primary);
+  }
+
+  .focus\:border-blog-primary:focus {
+    border-color: var(--blog-primary);
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
